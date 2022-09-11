@@ -22,7 +22,6 @@
     "item_marker_offset" : [ 0, 8 ],
     "item_marker_anchor" : "bottom",
 
-    "pinIconUrl"       : "/static/icons/icon_pin_plein_violet.svg",
     "pinIconSize"      : {
       "highlighted" : [46, 46],
       "normal"      : [29, 29]
@@ -165,7 +164,7 @@
             "fill_color": [
               "interpolate",
               ["linear"],
-              ["get", "count_reg" ],
+              ["get", "count_dep" ],
               0,  "#f2f3f3",
               1,  "#d2ede9",
               25,  "#67c1b5",
@@ -183,12 +182,12 @@
               "fields" : [
                 { "position" : "field_title",      "field" : "nom",       "prefix" : null,       "suffix" : null },
                 { "position" : "field_title_post", "field" : "code",      "prefix" : " (",       "suffix" : ")" },
-                { "position" : "field_value",      "field" : "count_reg", "prefix" : "total : ", "suffix" : " organisations" }
+                { "position" : "field_value",      "field" : "count_dep", "prefix" : "total : ", "suffix" : " organisations" }
               ],
               "fields_settings": {
                 "nom" :        { "position": "title",      "prefix" : null,       "suffix" : null },
                 "code" :       { "position": "title_post", "prefix" : " (",       "suffix" : ")" },
-                "count_reg" :  { "position": "value",      "prefix" : "total : ", "suffix" : " organisations" }
+                "count_dep" :  { "position": "value",      "prefix" : "total : ", "suffix" : " organisations" }
               }
             },
             "legend" : {
@@ -205,7 +204,6 @@
               ]
             }
           },
-
           { "_COMMENT": "### OCCITANIE - EPCI",
             "is_activated" : true,
             "source_id" : "chorosource-epci",
