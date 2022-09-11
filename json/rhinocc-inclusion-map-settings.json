@@ -178,12 +178,6 @@
             "has_popup" : true, 
             "popup_config" : {
               "action" : "mousemove",
-              "_COMMENT": "### DEPRECATED 'fields' key",
-              "fields" : [
-                { "position" : "field_title",      "field" : "nom",       "prefix" : null,       "suffix" : null },
-                { "position" : "field_title_post", "field" : "code",      "prefix" : " (",       "suffix" : ")" },
-                { "position" : "field_value",      "field" : "count_dep", "prefix" : "total : ", "suffix" : " organisations" }
-              ],
               "fields_settings": {
                 "nom" :        { "position": "title",      "prefix" : null,       "suffix" : null },
                 "code" :       { "position": "title_post", "prefix" : " (",       "suffix" : ")" },
@@ -224,11 +218,11 @@
             "has_popup" : false, 
             "popup_config" : {
               "action" : "mousemove",
-              "fields" : [
-                { "position" : "field_title" ,      "field" : "nom",       "prefix" : null,       "suffix" : null },
-                { "position" : "field_title_post" , "field" : "code",      "prefix" : " (",       "suffix" : ")" },
-                { "position" : "field_value" ,      "field" : "count_dep", "prefix" : "total : ", "suffix" : " lieux" }
-              ]
+              "fields_settings": {
+                "nom" :        { "position": "title",      "prefix" : null,       "suffix" : null },
+                "code" :       { "position": "title_post", "prefix" : " (",       "suffix" : ")" },
+                "count_dep" :  { "position": "value",      "prefix" : "total : ", "suffix" : " organisations" }
+              }
             },
             "legend" : {
               "position" : "bottom-right", 
@@ -258,16 +252,17 @@
             "polygon_prop_id" : "objectid",
             "join_polygon_id_to_field"  : "departement",
             "agregated_data_field"      : "count_dep",
+            "fill_color": "#feb24c",
             "fill_opacity"        : 0.8,
             "fill_outline_color"  : "#fd8d3c",
             "has_popup" : false, 
             "popup_config" : {
               "action" : "mousemove",
-              "fields" : [
-                { "position" : "field_title" ,      "field" : "nom",       "prefix" : null,       "suffix" : null },
-                { "position" : "field_title_post" , "field" : "code",      "prefix" : " (",       "suffix" : ")" },
-                { "position" : "field_value" ,      "field" : "count_dep", "prefix" : "total : ", "suffix" : " lieux" }
-              ]
+              "fields_settings": {
+                "nom" :        { "position": "title",      "prefix" : null,       "suffix" : null },
+                "code" :       { "position": "title_post", "prefix" : " (",       "suffix" : ")" },
+                "count_dep" :  { "position": "value",      "prefix" : "total : ", "suffix" : " organisations" }
+              }
             },
             "legend" : {
               "position" : "bottom-right", 
