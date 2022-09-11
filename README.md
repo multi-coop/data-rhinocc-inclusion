@@ -52,6 +52,28 @@ sh setup.sh
 source venv/bin/activate
 ```
 
+---
+
+### Run local server
+
+To geocode the dataset :
+
+```sh
+python geocoder.py csv/rhinocc-inclusion-dataset.csv -sep , -adress adresse_full
+```
+
+or
+
+```sh
+sh run_geocoding.sh
+```
+
+The output geocoded file will be generated at `csv/geocoding/geocoded.csv`
+
+---
+
+### Run local server
+
 To run the server on `http://localhost:8800`:
 
 ```sh

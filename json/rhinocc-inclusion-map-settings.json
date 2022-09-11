@@ -13,8 +13,8 @@
     "useMarkerCluster" : true,
 
     "item_geo_fields"   : {
-      "latitude" : "lat",
-      "longitude": "lon"
+      "latitude" : "latitude",
+      "longitude": "longitude"
     },
 
     "item_marker"       : "map-marker",

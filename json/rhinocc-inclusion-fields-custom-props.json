@@ -43,6 +43,14 @@
       "hide": true
     },
     {
+      "name": "lat",
+      "hide": true
+    },
+    {
+      "name": "lon",
+      "hide": true
+    },
+    {
       "name": "nature_juridique",
       "subtype": "tag"
     },
