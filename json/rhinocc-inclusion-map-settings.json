@@ -159,8 +159,8 @@
 
             "need_aggregation" : true,
             "polygon_prop_id" : "code",
-            "join_polygon_id_to_field"  : "reg_code_geo",
-            "agregated_data_field"      : "count_reg",
+            "join_polygon_id_to_field"  : "departement",
+            "agregated_data_field"      : "count_dep",
             "fill_color": [
               "interpolate",
               ["linear"],
@@ -192,7 +192,7 @@
             },
             "legend" : {
               "position" : "bottom-right", 
-              "title" : "Tiers-lieux / département",
+              "title" : "département",
               "scales" : [
                 { "value" : ">150 lieux", "color" : "#106268"},
                 { "value" : "100 lieux",  "color" : "#10685c"},
