@@ -58,20 +58,6 @@
         "radius_max"          : 15,
         "max_zoom"            : 14,
         "min_zoom"            : 4,
-        "circle_color"        : "#e69c75",
-        "circle_stroke_color" : "#fff",
-        "circle_opacity"      : 0.7
-      },
-
-      "cluster_circles_layer" : {
-        "_COMMENT": "### clusters source and layer",
-        "is_activated"        : true,
-        "source_id"           : "clusterSource",
-        "layer_id"            : "cluster-circles",
-        "is_default_visible"  : false,
-
-        "is_source_distant"   : false,
-        "is_clickable"        : true,
 
         "circle_color": [
           "match",
@@ -117,6 +103,32 @@
         ],
         "circle_stroke_color" : "#FFFFFF",
         "circle_opacity"      : 0.9
+      },
+
+      "cluster_circles_layer" : {
+        "_COMMENT": "### clusters source and layer",
+        "is_activated"        : true,
+        "source_id"           : "clusterSource",
+        "layer_id"            : "cluster-circles",
+        "is_default_visible"  : false,
+
+        "is_source_distant"   : false,
+        "is_clickable"        : true,
+
+        "circle_color"     : "#e69c75",
+        "circle_color_100" : "#e39064",
+        "circle_color_250" : "#e08453",
+        "circle_color_500" : "#c9764a",
+        "circle_color_750" : "#b36942",
+
+        "circle_radius"     : 15, 
+        "circle_radius_100" : 20, 
+        "circle_radius_250" : 30, 
+        "circle_radius_500" : 40, 
+        "circle_radius_750" : 50, 
+
+        "circle_stroke_color" : "#fff",
+        "circle_stroke_width" : 1
       },
 
       "cluster_count_layer" : {
