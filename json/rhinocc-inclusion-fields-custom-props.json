@@ -52,10 +52,12 @@
     },
     {
       "name": "nature_juridique",
+      "title": "Nature juridique",
       "subtype": "tag"
     },
     {
       "name": "type_lieu",
+      "title": "Type de lieu",
       "subtype": "tag"
     },
     {
