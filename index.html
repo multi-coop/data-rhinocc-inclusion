@@ -87,11 +87,13 @@
               "activate": true,
               "filterfields": [
                 {
-                  "name": "type",
+                  "name": "type_lieu",
                   "filtering": "OR"
                 },
-                "platform_clean",
-                "depcode"
+                {
+                  "name": "nature_juridique",
+                  "filtering": "OR"
+                }
               ]
             },
             "schema": {
