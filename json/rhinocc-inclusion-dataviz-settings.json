@@ -1,0 +1,94 @@
+{
+  "charts": [
+    {
+      "title": { "fr": "REPARTITION DES COLLECTIVITES PAR TYPE DE PLATEFORME" },
+      "cols": 6,
+      "unit": { "fr": "collectivité(s)" },
+      "aggregatebyfield": "platform_clean",
+      "aggregationtype": "countitems",
+      "chartOptions": {
+        "chart": {
+          "type": "donut",
+          "height": 300
+        }
+      }
+    },
+    {
+      "title": { "fr": "REPARTITION DES COLLECTIVITES PAR TYPE DE COLLECTIVITE" },
+      "cols": 6,
+      "unit": { "fr": "collectivité(s)" },
+      "aggregatebyfield": "type",
+      "aggregationtype": "countitems",
+      "chartOptions": {
+        "chart": {
+          "type": "donut",
+          "height": 300
+        }
+      }
+    },
+    {
+      "title": { "fr": "NOMBRE DE COLLECTIVITES PAR TYPE DE PLATEFORME ET TYPE DE COLLECTIVITE" },
+      "cols": 12,
+      "unit": { "fr": "collectivité(s)" },
+      "categoriesbyfield": "type",
+      "aggregatebyfield": "platform_clean",
+      "aggregationtype": "countitems",
+      "chartOptions": {
+        "chart": {
+          "type": "bar",
+          "height": 500,
+          "stacked": true
+        },
+        "plotOptions": {
+          "bar": {
+            "horizontal": true
+          }
+        },
+        "stroke": {
+          "width": 0.5,
+          "colors": [ "#fff" ]
+        },
+        "xaxis": {
+          "labels": {
+            "hideOverLappingLabels": false
+          }
+        }
+      }
+    },
+    {
+      "title": { "fr": "REPARTITION DES COLLECTIVITES PAR TYPE DE PLATEFORME" },
+      "cols": 12,
+      "unit": { "fr": "collectivité(s)" },
+      "aggregatebyfield": "platform_clean",
+      "aggregationtype": "countitems",
+      "chartOptions": {
+        "chart": {
+          "type": "treemap",
+          "height": "100%"
+        },
+        "legend": {
+          "show": false
+        },
+        "colors": [
+          "#3B93A5",
+          "#F7B844",
+          "#ADD8C7",
+          "#EC3C65",
+          "#CDD7B6",
+          "#C1F666",
+          "#D43F97",
+          "#1E5D8C",
+          "#421243",
+          "#EF6537",
+          "#C0ADDB"
+        ],
+        "plotOptions": {
+          "treemap": {
+            "distributed": true,
+            "enableShades": false
+          }
+        }
+      }
+    }
+  ]
+}
