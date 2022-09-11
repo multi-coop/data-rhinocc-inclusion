@@ -40,7 +40,7 @@
       "bgColor" : "red"
     },
     {
-      "name": "codes_types_mediation",
+      "name": "codes_types_mediations",
       "subtype": "tags",
       "allowNew": true,
       "tagSeparator": "-",

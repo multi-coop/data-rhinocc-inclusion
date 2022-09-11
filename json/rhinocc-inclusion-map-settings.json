@@ -1,68 +1,13 @@
 {
-  "contentFields"  : [
-
-    { "field" : "id_odf",
-      "field_format" : { "trim" : null, "type" : "object", "retrieve" : [0] },
-      "is_visible" : true,
-      "position" : "block_id"
-    },
-    { "field" : "dep_label", 
-      "field_format" : { "trim" : null, "type" : "object", "retrieve" : [0] },
-      "is_visible" : true,
-      "position" : "block_address"
-    },
-    { "field" : "nom", 
-      "field_format" : { "trim" : null, "type" : "object", "retrieve" : [0] },
-      "is_visible" : true,
-      "position" : "block_title"
-    },
-    { "field" : "text",
-      "field_format" : { "trim" : 100, "type" : "object", "retrieve" : [0] },
-      "is_visible" : true,
-      "position" : "block_abstract"
-    },
-    { "field"       : "type",
-      "field_format" : { "trim" : 20, "type" : "object", "retrieve" : [0] },
-      "is_visible"  : true,
-      "position"    : "block_tags",
-      "has_tooltip" : true,
-      "is_tag_like" : true,
-      "tags_separator" : "-",
-      "text_color" : "white",
-      "background_color" : "primary",
-      "convert_from_filters" : true
-    },
-    { "field"       : "platform_clean",
-      "field_format" : { "trim" : 20, "type" : "object", "retrieve" : [0] },
-      "is_visible"  : true,
-      "position"    : "block_tags_bis",
-      "has_tooltip" : true,
-      "is_tag_like" : true,
-      "tags_separator" : "-",
-      "text_color" : "white",
-      "background_color" : "warning",
-      "convert_from_filters" : true
-    },
-    { "field"       : "tags",
-      "field_format" : { "trim" : 20, "type" : "object", "retrieve" : [0] },
-      "is_visible"  : true,
-      "position"    : "block_tags_ter",
-      "has_tooltip" : true,
-      "is_tag_like" : true,
-      "tags_separator" : "-",
-      "text_color" : "white",
-      "background_color" : "light",
-      "convert_from_filters" : true
-    }
-  ],
 
   "mapOptions"   : {
 
     "url"              : "https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png",
     "attribution"      : "&copy; <a href=\"https://www.openstreetmap.org/copyright\">OpenStreetMap</a> contributors &copy; <a href=\"https://carto.com/attributions\">CARTO</a>",
     "subdomains"       : "abcd",
-    "center"           : [2.2137, 47.1793],
-    "zoom"             : 5,
+    "center"           : [1.625257, 43.281245],
+    "currentCenter"    : [1.625257, 43.281245],
+    "zoom"             : 7.3,
     "maxZoom"          : 18,
     "minZoom"          : 2,
     "useMarkerCluster" : true,
@@ -104,37 +49,17 @@
         "has_popup"           : true,
         "popup_config"        : {
           "action" : "mousemove",
-          "_COMMENT": "### DEPRECATED 'field' key",
-          "fields" : [
-            { "position" : "field_main_title", "field" : "nom", "prefix" : null, "suffix" : null, "class": "is-size-6 has-text-weight-semibold" },
-            { "position" : "field_info", "field" : null, "prefix" : "(cliquez pour + d'infos)", "suffix" : null, "class": "has-text-centered has-text-weight-light" }
-          ],
           "fields_settings": {
-            "nom" :          { "position": "main_title", "prefix" : null, "suffix" : null, "class": "is-size-6 has-text-weight-semibold" },
-            "_gitribute_" :  { "position": "info",       "prefix" : "(cliquez pour + d'infos)", "suffix" : null, "class": "has-text-centered has-text-weight-light" }
-          }
-        },
-        "cards_settings": {
-          "mini": {
-            "nom" :   { "position": "title" },
-            "siren" : { "position": "resume" },
-            "tags" :  { "position": "tags" } 
-          },
-          "detail": {
-            "nom" :       { "position": "title" },
-            "orga" :      { "position": "resume" },
-            "siren" :     { "position": "description" },
-            "adress" :    { "position": "description" },
-            "dep_label" : { "position": "tags" },
-            "tags"  :     { "position": "tags" }
+            "nom" :       { "position": "main_title", "prefix" : null, "suffix" : null, "class": "is-size-6 has-text-weight-semibold" },
+            "_datami_" :  { "position": "info",       "prefix" : "(cliquez pour + d'infos)", "suffix" : null, "class": "has-text-centered has-text-weight-light" }
           }
         },
 
         "radius_min"          : 2,
-        "radius_max"          : 20,
+        "radius_max"          : 15,
         "max_zoom"            : 14,
         "min_zoom"            : 4,
-        "circle_color"        : "#004494",
+        "circle_color"        : "#e69c75",
         "circle_stroke_color" : "#fff",
         "circle_opacity"      : 0.7
       },
@@ -149,17 +74,17 @@
         "is_source_distant"   : false,
         "is_clickable"        : true,
 
-        "circle_color"     : "#e5ecf4",
-        "circle_color_100" : "#b2c6de",
-        "circle_color_250" : "#668ebe",
-        "circle_color_500" : "#3269a9",
-        "circle_color_750" : "#004494",
+        "circle_color"     : "#e69c75", 
+        "circle_color_100" : "#e39064", 
+        "circle_color_250" : "#e08453", 
+        "circle_color_500" : "#c9764a", 
+        "circle_color_750" : "#b36942", 
 
         "circle_radius"     : 15, 
         "circle_radius_100" : 20, 
-        "circle_radius_250" : 25, 
-        "circle_radius_500" : 30, 
-        "circle_radius_750" : 35, 
+        "circle_radius_250" : 30, 
+        "circle_radius_500" : 40, 
+        "circle_radius_750" : 50, 
 
         "circle_stroke_color" : "#fff",
         "circle_stroke_width" : 1
@@ -184,11 +109,22 @@
         "is_default_visible"  : true,
         "is_source_distant"   : false,
         "is_clickable"        : true,
-
-        "circle_color"        : "#fff",
-        "circle_stroke_color" : "#004494",
-        "circle_radius"       : 5,
-        "circle_stroke_width" : 5
+        "add_zoom_on_click"   : 3.5,
+        "is_hoverable"        : true,
+        "hover_infos"         : {},
+        "direct_to_detail"    : false,
+        "has_popup"           : true, 
+        "popup_config"        : {
+          "action" : "mousemove",
+          "fields_settings": {
+            "nom" :       { "position": "main_title", "prefix" : null, "suffix" : null, "class": "is-size-6 has-text-weight-semibold" },
+            "_datami_" :  { "position": "info",       "prefix" : "(cliquez pour + d'infos)", "suffix" : null, "class": "has-text-centered has-text-weight-light" }
+          }
+        },
+        "circle_color"        : "#fff", 
+        "circle_stroke_color" : "#e08453",
+        "circle_radius"       : 7, 
+        "circle_stroke_width" : 3 
       },
 
       "choropleth_layer" : {
@@ -211,15 +147,15 @@
         "_COMMENT_SOURCES": "### list of choropleth sources",
         "sources" : [
 
-          { "_COMMENT": "### FR - régions",
+          { "_COMMENT": "### FR - departements",
             "is_activated" : true,
-            "source_id" : "chorosource-regions",
-            "layer_id"  : "chorolayer-regions",
+            "source_id" : "chorosource-departements",
+            "layer_id"  : "chorolayer-departements",
             "is_default_visible" : true,
-            "max_zoom" : 10,
+            "max_zoom" : 9,
             "min_zoom" : 0,
 
-            "source_url" : "https://raw.githubusercontent.com/gregoiredavid/france-geojson/master/regions-version-simplifiee.geojson", 
+            "source_url" : "https://raw.githubusercontent.com/gregoiredavid/france-geojson/master/regions/occitanie/departements-occitanie.geojson", 
             "update_src_from_previous_layer" : false,
 
             "need_aggregation" : true,
@@ -256,152 +192,100 @@
               }
             },
             "legend" : {
-              "position" : "bottom-right",
-              "title" : "Légende",
+              "position" : "bottom-right", 
+              "title" : "Tiers-lieux / département",
               "scales" : [
-                { "value" : "> 30 organisations par région", "color" : "#106268"},
-                { "value" : "10 à 30 organisations par région",  "color" : "#158b7b"},
-                { "value" : "5 à 9 organisations par région",   "color" : "#67c1b5"},
-                { "value" : "1 à 4 organisations par région",   "color" : "#d2ede9"},
-                { "value" : "0 organisation par région",    "color" : "#f2f3f3"}
+                { "value" : ">150 lieux", "color" : "#106268"},
+                { "value" : "100 lieux",  "color" : "#10685c"},
+                { "value" : "50 lieux",  "color" : "#158b7b"},
+                { "value" : "25 lieux",  "color" : "#18a28f"},
+                { "value" : "10 lieux",   "color" : "#42b2a3"},
+                { "value" : "1 lieu",  "color" : "#6cc3b7"},
+                { "value" : "0 lieu",   "color" : "#fbf2ed"}
               ]
             }
-
           },
-          
-          { "_COMMENT": "### FR - départements",
+
+          { "_COMMENT": "### OCCITANIE - EPCI",
             "is_activated" : true,
-            "source_id" : "chorosource-departements",
-            "layer_id"  : "chorolayer-departements",
-            "is_default_visible" : false,
-            "max_zoom" : 10,
-            "min_zoom" : 0,
+            "source_id" : "chorosource-epci",
+            "layer_id"  : "chorolayer-epci",
+            "is_default_visible" : true,
+            "max_zoom" : 12,
+            "min_zoom" : 9,
 
-            "source_url" : "https://raw.githubusercontent.com/gregoiredavid/france-geojson/master/departements-version-simplifiee.geojson", 
+            "source_url" : "https://raw.githubusercontent.com/co-demos/rhinocc-carto/master/data/datasets_src/EPCI_4DPT.geojson", 
             "update_src_from_previous_layer" : false,
-
-            "need_aggregation" : true,
-            "polygon_prop_id" : "code",
-            "join_polygon_id_to_field"  : "depcode",
+            "need_aggregation" : false,
+            "polygon_prop_id" : "code_epci",
+            "join_polygon_id_to_field"  : "departement",
             "agregated_data_field"      : "count_dep",
-            "fill_color": [
-              "interpolate",
-              ["linear"],
-              ["get", "count_dep" ],
-              0,  "#f2f3f3",
-              1,  "#d2ede9",
-              5,  "#67c1b5",
-              10, "#158b7b",
-              30, "#106268"
-            ],
-            "fill_opacity"        : 0.5,
-            "fill_outline_color"  : "#004494",
-
+            "fill_color": "transparent",
+            "fill_opacity"        : 0.9,
+            "fill_outline_color"  : "#e69c75",
             "has_popup" : false, 
             "popup_config" : {
               "action" : "mousemove",
-              "_COMMENT": "### DEPRECATED 'fields' key",
               "fields" : [
-                { "position" : "field_title",      "field" : "nom",       "prefix" : null,       "suffix" : null },
-                { "position" : "field_title_post", "field" : "code",      "prefix" : " (",       "suffix" : ")" },
-                { "position" : "field_value",      "field" : "count_dep", "prefix" : "total : ", "suffix" : " organisations" }
-              ],
-              "fields_settings": {
-                "nom" :        { "position": "title",      "prefix" : null,       "suffix" : null },
-                "code" :       { "position": "title_post", "prefix" : " (",       "suffix" : ")" },
-                "count_dep" :  { "position": "value",      "prefix" : "total : ", "suffix" : " organisations" }
-              }
-            },
-            "legend" : {
-              "position" : "bottom-right",
-              "title" : "Légende",
-              "scales" : [
-                { "value" : "> 30 organisations par département", "color" : "#106268"},
-                { "value" : "10 à 30 organisations par département",  "color" : "#158b7b"},
-                { "value" : "5 à 9 organisations par département",   "color" : "#67c1b5"},
-                { "value" : "1 à 4 organisations par département",   "color" : "#d2ede9"},
-                { "value" : "0 organisation par département",    "color" : "#f2f3f3"}
+                { "position" : "field_title" ,      "field" : "nom",       "prefix" : null,       "suffix" : null },
+                { "position" : "field_title_post" , "field" : "code",      "prefix" : " (",       "suffix" : ")" },
+                { "position" : "field_value" ,      "field" : "count_dep", "prefix" : "total : ", "suffix" : " lieux" }
               ]
-            }
-
-          },
-
-          { "_COMMENT"     : "### FR - communes",
-            "is_activated" : false,
-            "source_id"    : "chorosource-communes",
-            "layer_id"     : "chorolayer-communes",
-            "is_default_visible" : true,
-            "max_zoom" : 18,
-            "min_zoom" : 8,
-
-            "source_url" : "https://raw.githubusercontent.com/gregoiredavid/france-geojson/master/communes-avec-outre-mer.geojson", 
-            "update_src_from_previous_source" : true,
-            "update_src_options" : [ 
-              { 
-                "url_base" : "https://geo.api.gouv.fr/departements/<dep_code>/communes?geometry=contour&format=geojson&type=commune-actuelle", 
-                "response_format" : "geojson",
-                "upper_load_method" : "zoom",
-                "upper_load_feat" : "only_center",
-                "upper_main_matching_prop" : "code",
-                "upper_source_id" : "chorosource-departements", 
-                "upper_layer_id" : "chorolayer-departements", 
-                "slugs_map" : [
-                  {
-                    "value_property" : "code",
-                    "_COMMENT_VALUE_PROPERTY": "### field in property to retrieve",
-                    "value_slug_code" : "dep_code" 
-                  }
-                ]
-              }
-            ],
-
-            "need_aggregation" : true,
-            "polygon_prop_id" : "code",
-            "join_polygon_id_to_field"  : "INSEECOM",
-            "agregated_data_field"      : "count_com",
-            "fill_color": [
-              "interpolate",
-              ["linear"],
-              ["get", "count_com" ],
-              0,  "#888888",
-              1,  "#EED322",
-              2,  "#DA9C20",
-              5,  "#B86B25",
-              7,  "#8B4225",
-              10, "#723122"
-            ],
-            "fill_opacity"        : 0.5,
-            "fill_outline_color"  : "rgb(256,256,256)",
-            "has_popup" : true, 
-            "popup_config" : {
-              "action" : "mousemove",
-              "_COMMENT": "### DEPRECATED 'fields' key",
-              "fields" : [
-                { "position" : "field_title",      "field" : "nom",       "prefix" : null,       "suffix" : null },
-                { "position" : "field_title_post", "field" : "code",      "prefix" : " (",       "suffix" : ")" },
-                { "position" : "field_value",      "field" : "count_com", "prefix" : "total : ", "suffix" : " organisations" }
-              ],
-              "fields_settings": {
-                "nom" :        { "position": "title",      "prefix" : null,       "suffix" : null },
-                "code" :       { "position": "title_post", "prefix" : " (",       "suffix" : ")" },
-                "count_com" :  { "position": "value",      "prefix" : "total : ", "suffix" : " organisations" }
-              }
             },
             "legend" : {
               "position" : "bottom-right", 
-              "title" : "Organisations / communes",
+              "title" : "Tiers-lieux / EPCI",
               "scales" : [
-                { "value" : ">10 organisations", "color" : "#723122"},
-                { "value" : "7 organisations",   "color" : "#8B4225"},
-                { "value" : "5 organisations",   "color" : "#B86B25"},
-                { "value" : "2 organisations",   "color" : "#DA9C20"},
-                { "value" : "1 organisation",    "color" : "#EED322"},
-                { "value" : "0 organisation",    "color" : "#888888"}
+                { "value" : ">150 lieux", "color" : "#106268"},
+                { "value" : "100 lieux",  "color" : "#10685c"},
+                { "value" : "50 lieux",  "color" : "#158b7b"},
+                { "value" : "25 lieux",  "color" : "#18a28f"},
+                { "value" : "10 lieux",   "color" : "#42b2a3"},
+                { "value" : "1 lieu",   "color" : "#6cc3b7"},
+                { "value" : "0 lieu",    "color" : "#fbf2ed"}
+              ]
+            }
+          },
+          { "_COMMENT": "### OCCITANIE - QPV",
+            "is_activated" : true,
+            "source_id" : "chorosource-qpv",
+            "layer_id"  : "chorolayer-qpv",
+            "is_default_visible" : true,
+            "max_zoom" : 15,
+            "min_zoom" : 0,
+
+            "source_url" : "https://raw.githubusercontent.com/co-demos/rhinocc-carto/master/data/datasets_src/QPV_4DPT.geojson", 
+            "update_src_from_previous_layer" : false,
+            "need_aggregation" : false,
+            "polygon_prop_id" : "objectid",
+            "join_polygon_id_to_field"  : "departement",
+            "agregated_data_field"      : "count_dep",
+            "fill_opacity"        : 0.8,
+            "fill_outline_color"  : "#fd8d3c",
+            "has_popup" : false, 
+            "popup_config" : {
+              "action" : "mousemove",
+              "fields" : [
+                { "position" : "field_title" ,      "field" : "nom",       "prefix" : null,       "suffix" : null },
+                { "position" : "field_title_post" , "field" : "code",      "prefix" : " (",       "suffix" : ")" },
+                { "position" : "field_value" ,      "field" : "count_dep", "prefix" : "total : ", "suffix" : " lieux" }
+              ]
+            },
+            "legend" : {
+              "position" : "bottom-right", 
+              "title" : "Tiers-lieux / EPCI",
+              "scales" : [
+                { "value" : ">150 lieux", "color" : "#106268"},
+                { "value" : "100 lieux",  "color" : "#10685c"},
+                { "value" : "50 lieux",  "color" : "#158b7b"},
+                { "value" : "25 lieux",  "color" : "#18a28f"},
+                { "value" : "10 lieux",   "color" : "#42b2a3"},
+                { "value" : "1 lieu",   "color" : "#6cc3b7"},
+                { "value" : "0 lieu",    "color" : "#fbf2ed"}
               ]
             }
           }
         ]
-
       },
 
       "heatmap_layer" : {
@@ -424,27 +308,32 @@
       "is_drawer_open"  : false,
       "layers_switches" : [ 
         {
-          "label" : "régions" ,
-          "layers" : [ "chorolayer-regions" ],
-          "default_visible" : true
-        },
-        {
-          "label" : "départements",
-          "layers" : [ "chorolayer-departements" ], 
-          "default_visible" : false 
-        },
-        {
-          "label" : "organisations", 
+          "label" : "lieux",  
           "layers" : [ "all-points" ],
-          "default_visible" : true
-        },
-        {
-          "label" : "clusters",
-          "layers" : [ "cluster-circles", "cluster-counts" ],
           "default_visible" : false
-        },
+        }, 
         {
-          "label" : "radar",
+          "label" : "ensembles" ,
+          "layers" : [ "cluster-circles", "cluster-counts", "unclustered-point" ],
+          "default_visible" : true
+        }, 
+        {
+          "label" : "départements" ,
+          "layers" : [ "chorolayer-departements" ],
+          "default_visible" : true
+        }, 
+        {
+          "label" : "EPCI" ,
+          "layers" : [ "chorolayer-epci" ],
+          "default_visible" : true
+        }, 
+        {
+          "label" : "QPV" ,
+          "layers" : [ "chorolayer-qpv" ],
+          "default_visible" : true
+        }, 
+        {
+          "label" : "heatmap" ,
           "layers" : [ "heatmap-layer" ],
           "default_visible" : false
         }
