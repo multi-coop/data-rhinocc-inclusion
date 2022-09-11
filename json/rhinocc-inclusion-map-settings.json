@@ -78,7 +78,7 @@
           "#fdbf6f",
           "La Poste",
           "#ff7f00",
-          "#000000"
+          "#e69c75"
         ],
         "circle_color_activated": [
           "match",
@@ -99,7 +99,7 @@
           "#fdbf6f",
           "La Poste",
           "#ff7f00",
-          "#000000"
+          "#e69c75"
         ],
         "circle_stroke_color" : "#FFFFFF",
         "circle_opacity"      : 0.9
