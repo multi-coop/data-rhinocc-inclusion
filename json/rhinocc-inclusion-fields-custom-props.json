@@ -13,23 +13,52 @@
       "name": "siren"
     },
     {
-      "name": "adress",
+      "name": "adresse",
       "subtype": "longtext",
       "maxLength": 15
     },
     {
-      "name": "id_datagouv",
+      "name": "adresse_full",
+      "subtype": "longtext",
+      "maxLength": 15
+    },
+    {
+      "name": "statut_infos",
       "hide": true
     },
     {
-      "name": "type",
+      "name": "nature_juridique",
       "subtype": "tag"
     },
     {
-      "name": "tags",
+      "name": "type_lieu",
+      "subtype": "tag"
+    },
+    {
+      "name": "code_label",
+      "subtype": "tag",
+      "bgColor" : "red"
+    },
+    {
+      "name": "codes_types_mediation",
       "subtype": "tags",
+      "allowNew": true,
       "tagSeparator": "-",
       "bgColor" : "#BED3C3"
+    },
+    {
+      "name": "codes_publics",
+      "subtype": "tags",
+      "allowNew": true,
+      "tagSeparator": "-",
+      "bgColor" : "#BED3C3"
+    },
+    {
+      "name": "codes_thematiques",
+      "subtype": "tags",
+      "allowNew": true,
+      "tagSeparator": "-",
+      "bgColor" : "orange"
     },
     {
       "name": "merge",
@@ -59,19 +88,11 @@
       "subtype": "tag"
     },
     {
-      "name": "tranche_ptf",
-      "subtype": "tag"
+      "name": "email_structure",
+      "subtype": "email"
     },
     {
-      "name": "tranche_pop",
-      "subtype": "tag"
-    },
-    {
-      "name": "url_ptf",
-      "subtype": "link"
-    },
-    {
-      "name": "url_datagouv",
+      "name": "site_internet",
       "subtype": "link"
     }
   ],

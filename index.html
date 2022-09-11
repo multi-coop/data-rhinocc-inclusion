@@ -79,7 +79,7 @@
           "gitfile_test": "http://localhost:8800/statics/csv/rhinocc-inclusion-dataset.csv",
           "gitfile": "https://github.com/multi-coop/data-rhinocc-inclusion/blob/main/csv/rhinocc-inclusion-dataset.csv",
           "default-tab": true,
-          "options_test": {
+          "options": {
             "height": "500px",
             "separator": ",",
             "lockcolumns": true,
@@ -96,7 +96,7 @@
             },
             "schema": {
               "file_test": "http://localhost:8900/raw/json/inclusion-schema.json",
-              "file": "https://github.com/multi-coop/data-rhinocc-inclusion/blob/main/json/rhinocc-inclusion-schema.json"
+              "file": "https://github.com/multi-coop/data-inclusion-schema/blob/main/json/inclusion-schema.json"
             },
             "fields-custom-properties": {
               "file_test": "http://localhost:8800/raw/json/rhinocc-inclusion-fields-custom-props.json",
@@ -142,14 +142,6 @@
                   "position": "description",
                   "prefix": "Numéro SIREN :",
                   "block_title": "Description"
-                },
-                "url_ptf": {
-                  "position": "links",
-                  "block_title": "Lien vers la plateforme"
-                },
-                "url_datagouv": {
-                  "position": "links",
-                  "block_title": "Lien vers data.gouv.fr"
                 },
                 "dep_label": {
                   "position": "tags",
@@ -213,15 +205,15 @@
                 }
               }
             },
-            "datavizview": {
-              "activate": true,
+            "datavizview_test": {
+              "activate": false,
               "default": false,
               "file_test": "http://localhost:8800/raw/json/rhinocc-inclusion-dataviz-settings.json",
               "file": "https://github.com/multi-coop/data-rhinocc-inclusion/blob/main/json/rhinocc-inclusion-dataviz-settings.json"
             },
-            "mapview": {
-              "activate": true,
-              "default": true,
+            "mapview_test": {
+              "activate": false,
+              "default": false,
               "maps": [
                 {
                   "title": {
