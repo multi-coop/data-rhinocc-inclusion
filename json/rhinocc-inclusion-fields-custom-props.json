@@ -2,6 +2,8 @@
   "fields": [
     {
       "name": "n_ref",
+      "title": "Identifiant",
+      "description": "Identifiant unique",
       "locked": true
     },
     {
