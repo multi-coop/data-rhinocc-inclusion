@@ -18,9 +18,9 @@ La solution proposée et réalisée ici s'appuie sur un projet open source port�
 
 ## Démo
 
-- Page html de démo : (status)
+- Page html de démo : [![Netlify Status](https://api.netlify.com/api/v1/badges/fd3f3d95-d447-4cc8-89b8-552e2a0730b1/deploy-status)](https://app.netlify.com/sites/datami-demo-rhinoc-inclusion/deploys)
 - url de démo :
-  - DEMO / données observatoire ODF : https://demo-datami-rhinocc.netlify.app/
+  - DEMO / données observatoire ODF : https://demo-datami-rhinocc-inclusion.netlify.app/
 
 ---
 
