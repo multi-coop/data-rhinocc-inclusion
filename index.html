@@ -71,15 +71,15 @@
       <datami-multi-files
         title="Inclusion et médiation numérique en Occitanie"
         options='{
-        "display": "horizontal"
-      }'
+          "display": "horizontal"
+        }'
         gitfiles='[
         {
           "title": "Rhinocc : lieux de médiation numérique",
           "activate": true,
-          "gitfile": "http://localhost:8800/statics/csv/geocoding/geocoded.csv",
-          "gitfile_": "https://github.com/multi-coop/data-rhinocc-inclusion/blob/main/csv/geocoding/geocoded.csv",
+          "gitfile_test": "http://localhost:8800/statics/csv/geocoding/geocoded.csv",
           "gitfile_test_bis": "https://github.com/multi-coop/data-rhinocc-inclusion/blob/main/csv/rhinocc-inclusion-dataset.csv",
+          "gitfile": "https://github.com/multi-coop/data-rhinocc-inclusion/blob/main/csv/geocoding/geocoded.csv",
           "default-tab": true,
           "options": {
             "height": "500px",
@@ -210,10 +210,10 @@
               }
             },
             "datavizview": {
-              "activate": false,
+              "activate": true,
               "default": false,
-              "file": "http://localhost:8800/statics/json/rhinocc-inclusion-dataviz-settings.json",
-              "file_": "https://github.com/multi-coop/data-rhinocc-inclusion/blob/main/json/rhinocc-inclusion-dataviz-settings.json"
+              "file_test": "http://localhost:8800/statics/json/rhinocc-inclusion-dataviz-settings.json",
+              "file": "https://github.com/multi-coop/data-rhinocc-inclusion/blob/main/json/rhinocc-inclusion-dataviz-settings.json"
             },
             "mapview": {
               "activate": true,
@@ -250,8 +250,8 @@
       ></datami-multi-files>
 
       <!-- DATAMI WIDGET'S APP.JS SCRIPT -->
-      <!-- <script src="https://datami-widget.multi.coop/js/app.js" type="text/javascript" defer></script> -->
-      <script src="http://localhost:8080/js/app.js" type="text/javascript" defer></script>
+      <script src="https://datami-widget.multi.coop/js/app.js" type="text/javascript" defer></script>
+      <!-- <script src="http://localhost:8080/js/app.js" type="text/javascript" defer></script> -->
 
 
     </div>
