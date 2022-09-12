@@ -1,5 +1,5 @@
 '''
-mini-seerver to test files with apiviz
+mini-seerver to test files loading
 '''
 
 # from pprint import pprint, pformat

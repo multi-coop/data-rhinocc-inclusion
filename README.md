@@ -54,7 +54,7 @@ source venv/bin/activate
 
 ---
 
-### Run local server
+### Geocoder
 
 To geocode the dataset :
 
