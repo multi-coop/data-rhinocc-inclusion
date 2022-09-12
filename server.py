@@ -26,14 +26,6 @@ def sendStatic(folder_path, filename):
   print("sendStatic > filename : ", filename)
   return send_from_directory(folder_path, filename)
 
-@app.route('/raw/<path:folder_path>/<string:filename>')
-def sendRawJson(folder_path, filename):
-  print("\n... sendRawJson > folder_path : ", folder_path)
-  print("sendRawJson > filename : ", filename)
-  resp = send_from_directory(folder_path, filename)
-  print("sendRawJson > resp : ", resp)
-  return resp
-
 # @app.route('/images/<path:folder_path>/<string:filename>')
 # def sendImage(folder_path, filename):
 #   print("folder_path : ", folder_path)
