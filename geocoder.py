@@ -80,7 +80,7 @@ try:
       BAN_adress = props.get('name', '')
       BAN_adress_full = props.get('label', '')
       BAN_city = props.get('city', '')
-      BAN_postcode = props.get('poscode', '')
+      BAN_postcode = props.get('postcode', '')
       if debug: print("... lat : ", lat)
       if debug: print("... lon : ", lon)
       if debug: print("... BAN_adress : ", BAN_adress)
