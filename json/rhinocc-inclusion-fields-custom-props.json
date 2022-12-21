@@ -12,9 +12,6 @@
       "primaryKey": true
     },
     {
-      "name": "siren"
-    },
-    {
       "name": "adresse",
       "subtype": "longtext",
       "maxLength": 15
@@ -25,16 +22,83 @@
       "maxLength": 15
     },
     {
+      "name": "precisions",
+      "subtype": "longtext",
+      "maxLength": 15
+    },
+    {
+      "name": "email_structure",
+      "subtype": "email"
+    },
+    {
+      "name": "site_internet",
+      "subtype": "link"
+    },
+    {
       "name": "departement",
       "subtype": "tag",
-      "foreignKey": {
-        "activate": true,
+      "definitions": [
+        {
+          "value": "09",
+          "label": "Ariège"
+        },
+        {
+          "value": "11",
+          "label": "Aude"
+        },
+        {
+          "value": "12",
+          "label": "Aveyron"
+        },
+        {
+          "value": "30",
+          "label": "Gard"
+        },
+        {
+          "value": "31",
+          "label": "Haute-Garonne"
+        },
+        {
+          "value": "32",
+          "label": "Gers"
+        },
+        {
+          "value": "34",
+          "label": "Hérault"
+        },
+        {
+          "value": "46",
+          "label": "Lot"
+        },
+        {
+          "value": "48",
+          "label": "Lozère"
+        },
+        {
+          "value": "65",
+          "label": "Hautes-Pyrénées"
+        },
+        {
+          "value": "66",
+          "label": "Pyrénées-Orientales"
+        },
+        {
+          "value": "81",
+          "label": "Tarn"
+        },
+        {
+          "value": "82",
+          "label": "Tarn-et-Garonne"
+        }
+      ],
+      "foreignKey_": {
+        "activate": false,
         "ressource": "https://github.com/multi-coop/gitribute-content-test/blob/main/data/csv/odf/ODF-Observatoire-departements-regions.csv",
         "ressourceOptions": {
           "separator": ","
         },
         "fields": "depcode",
-        "returnFields" : [
+        "returnFields": [
           "Département",
           "région"
         ]
@@ -42,14 +106,6 @@
     },
     {
       "name": "statut_infos",
-      "hide": true
-    },
-    {
-      "name": "lat",
-      "hide": true
-    },
-    {
-      "name": "lon",
       "hide": true
     },
     {
@@ -65,72 +121,199 @@
     {
       "name": "code_label",
       "subtype": "tag",
-      "bgColor" : "red"
+      "bgColor": "red",
+      "definitions": [
+        {
+          "value": "APTIC",
+          "label": "APTIC"
+        },
+        {
+          "value": "MSAP",
+          "label": "Maison de Service Au Public"
+        },
+        {
+          "value": "MFS",
+          "label": "France Services"
+        },
+        {
+          "value": "EPN",
+          "label": "Espace Public Numérique"
+        },
+        {
+          "value": "TL",
+          "label": "Tiers lieu"
+        },
+        {
+          "value": "",
+          "label": "Agrément + permanences CAF CPAM ..."
+        },
+        {
+          "value": "REL",
+          "label": "Structures relais Coll.in/RhinOcc"
+        },
+        {
+          "value": "TL-APTIC",
+          "label": "Tiers lieu - APTIC"
+        },
+        {
+          "value": "EPN-TL-APTIC",
+          "label": "Espace Public Numérique - Tiers lieu - APTIC"
+        }
+      ]
     },
     {
       "name": "codes_types_mediations",
       "subtype": "tags",
       "allowNew": true,
       "tagSeparator": "-",
-      "bgColor" : "#BED3C3"
+      "bgColor": "#BED3C3",
+      "definitions": [
+        {
+          "value": "ORD",
+          "label": "Ordinateur en libre service"
+        },
+        {
+          "value": "ORDM",
+          "label": "Ordinateur avec médiateur.rice"
+        },
+        {
+          "value": "REP",
+          "label": "Ateliers de réparation de matériel informatique"
+        },
+        {
+          "value": "FL",
+          "label": "FabLab"
+        },
+        {
+          "value": "W",
+          "label": "Espace de co-working"
+        },
+        {
+          "value": "ACCDS",
+          "label": "Accompagnement individuel accès aux droits simple"
+        },
+        {
+          "value": "ACCDA",
+          "label": "Accompagnement individuel approfondi accès aux droits"
+        },
+        {
+          "value": "SENS",
+          "label": "Sensibilisation autour du numérique"
+        },
+        {
+          "value": "ACCN",
+          "label": "Accompagnement individuel des actions uniquement numériques"
+        },
+        {
+          "value": "COMP",
+          "label": "Ateliers informatiques de montée en compétences"
+        },
+        {
+          "value": "PRO",
+          "label": "Formation numérique professionnalisante"
+        },
+        {
+          "value": "ENT",
+          "label": "Ateliers collectifs d’entraide autour du numérique"
+        }
+      ]
     },
     {
       "name": "codes_publics",
       "subtype": "tags",
       "allowNew": true,
       "tagSeparator": "-",
-      "bgColor" : "#BED3C3"
+      "bgColor": "#BED3C3",
+      "definitions": [
+        {
+          "value": "SEN",
+          "label": "Seniors"
+        },
+        {
+          "value": "J",
+          "label": "jeunes"
+        },
+        {
+          "value": "DE",
+          "label": "demandeur.se d’emploi"
+        },
+        {
+          "value": "AD",
+          "label": "adultes"
+        },
+        {
+          "value": "TP",
+          "label": "tout public"
+        },
+        {
+          "value": "ALL",
+          "label": "allocataire CAF"
+        },
+        {
+          "value": "ETR",
+          "label": "étranger"
+        }
+      ]
     },
     {
       "name": "codes_thematiques",
       "subtype": "tags",
       "allowNew": true,
       "tagSeparator": "-",
-      "bgColor" : "orange"
+      "bgColor": "orange",
+      "definitions": [
+        {
+          "value": "MOB",
+          "label": "Mobilité"
+        },
+        {
+          "value": "SAN",
+          "label": "santé"
+        },
+        {
+          "value": "EM",
+          "label": "emploi"
+        },
+        {
+          "value": "FAM",
+          "label": "famille/parentalité"
+        },
+        {
+          "value": "FI",
+          "label": "finances"
+        },
+        {
+          "value": "LOG",
+          "label": "logement"
+        }
+      ]
     },
     {
-      "name": "merge",
-      "subtype": "tags",
-      "tagSeparator": "+"
+      "name": "lat",
+      "hide": true
     },
     {
-      "name": "orga",
-      "subtype": "tag",
-      "allowNew": true,
-      "bgColor" : "#F0BE86"
+      "name": "lon",
+      "hide": true
     },
     {
-      "name": "platform_clean",
-      "subtype": "tag"
+      "name": "BAN_latitude",
+      "subtype": "geopoint"
     },
     {
-      "name": "depcode",
-      "subtype": "tag"
-    },
-    {
-      "name": "reg_code_geo",
-      "subtype": "tag"
-    },
-    {
-      "name": "reg_code_short",
-      "subtype": "tag"
-    },
-    {
-      "name": "email_structure",
-      "subtype": "email"
-    },
-    {
-      "name": "site_internet",
-      "subtype": "link"
+      "name": "BAN_longitude",
+      "subtype": "geopoint"
     }
   ],
   "consolidation": [
     {
       "api_name": "api-entreprise",
       "source_fields": [
-        { "name": "siren" }
+        {
+          "name": "siren"
+        }
       ],
-      "activate": true,
+      "activate": false,
       "api": "https://entreprise.data.gouv.fr/api/sirene/v3/unites_legales/{{siren}}",
       "results_fields": [
         {
@@ -154,18 +337,20 @@
     {
       "api_name": "adresse.gouv.fr",
       "source_fields": [
-        { "name": "adress" }
+        {
+          "name": "adress_full"
+        }
       ],
       "activate": true,
-      "api": "https://api-adresse.data.gouv.fr/search/?q={{adress}}",
+      "api": "https://api-adresse.data.gouv.fr/search/?q={{adress_full}}",
       "results_fields": [
-        { 
-          "resp_field" : "features.0.geometry.coordinates.1",
-          "map_to_field": "lat"
+        {
+          "resp_field": "features.0.geometry.coordinates.1",
+          "map_to_field": "BAN_latitude"
         },
-        { 
-          "resp_field" : "features.0.geometry.coordinates.0",
-          "map_to_field": "lon"
+        {
+          "resp_field": "features.0.geometry.coordinates.0",
+          "map_to_field": "BAN_longitude"
         }
       ]
     }

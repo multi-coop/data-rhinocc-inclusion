@@ -1,0 +1,255 @@
+{
+  "fields": [
+    {
+      "name": "n_ref",
+      "type": "string",
+      "title": "N° ref"
+    },
+    {
+      "name": "statut_infos",
+      "type": "string",
+      "title": "Statut"
+    },
+    {
+      "name": "departement",
+      "type": "string",
+      "title": "Département"
+    },
+    {
+      "name": "ville",
+      "type": "string",
+      "title": "Ville"
+    },
+    {
+      "name": "code_commune",
+      "type": "string",
+      "title": "Code commune"
+    },
+    {
+      "name": "nom",
+      "type": "string",
+      "title": "Nom du lieu"
+    },
+    {
+      "name": "structure_porteuse",
+      "type": "string",
+      "title": "Structure porteuse"
+    },
+    {
+      "name": "code_postal",
+      "type": "string",
+      "title": "Code postal"
+    },
+    {
+      "name": "adresse",
+      "type": "string",
+      "title": "Adresse"
+    },
+    {
+      "name": "adresse_suite",
+      "type": "string",
+      "title": "Adresse"
+    },
+    {
+      "name": "adresse_full",
+      "type": "string",
+      "title": "Adresse"
+    },
+    {
+      "name": "nature_juridique",
+      "type": "string",
+      "title": "Nature juridique"
+    },
+    {
+      "name": "type_lieu",
+      "type": "string",
+      "title": "Type de lieu"
+    },
+    {
+      "name": "rattachement",
+      "type": "string",
+      "title": "Rattachement"
+    },
+    {
+      "name": "tel_structure",
+      "type": "string",
+      "title": "Téléphone"
+    },
+    {
+      "name": "email_structure",
+      "type": "string",
+      "title": "Email",
+      "format": "uri"
+    },
+    {
+      "name": "site_internet",
+      "type": "string",
+      "title": "Site web",
+      "format": "uri"
+    },
+    {
+      "name": "lundi",
+      "type": "string"
+    },
+    {
+      "name": "mardi",
+      "type": "string"
+    },
+    {
+      "name": "mercredi",
+      "type": "string"
+    },
+    {
+      "name": "jeudi",
+      "type": "string"
+    },
+    {
+      "name": "vendredi",
+      "type": "string"
+    },
+    {
+      "name": "samedi",
+      "type": "string"
+    },
+    {
+      "name": "dimanche",
+      "type": "string"
+    },
+    {
+      "name": "date_maj",
+      "type": "string"
+    },
+    {
+      "name": "public_toutes_actions",
+      "type": "string"
+    },
+    {
+      "name": "conditions_acces_toutes_actions",
+      "type": "string"
+    },
+    {
+      "name": "type_mediation_1",
+      "type": "string"
+    },
+    {
+      "name": "public_si_different_1",
+      "type": "string"
+    },
+    {
+      "name": "conditions_acces_si_diff_1",
+      "type": "string"
+    },
+    {
+      "name": "presta_mediation_1",
+      "type": "string"
+    },
+    {
+      "name": "type_mediation_2",
+      "type": "string"
+    },
+    {
+      "name": "public_si_different_2",
+      "type": "string"
+    },
+    {
+      "name": "conditions_acces_si_diff_2",
+      "type": "string"
+    },
+    {
+      "name": "presta_mediation_2",
+      "type": "string"
+    },
+    {
+      "name": "type_mediation_3",
+      "type": "string"
+    },
+    {
+      "name": "public_si_different_3",
+      "type": "string"
+    },
+    {
+      "name": "conditions_acces_si_diff_3",
+      "type": "string"
+    },
+    {
+      "name": "presta_mediation_3",
+      "type": "string"
+    },
+    {
+      "name": "type_mediation_4",
+      "type": "string"
+    },
+    {
+      "name": "public_si_different_4",
+      "type": "string"
+    },
+    {
+      "name": "conditions_acces_si_diff_4",
+      "type": "string"
+    },
+    {
+      "name": "presta_mediation_4",
+      "type": "string"
+    },
+    {
+      "name": "type_mediation_5",
+      "type": "string"
+    },
+    {
+      "name": "public_si_different_5",
+      "type": "string"
+    },
+    {
+      "name": "conditions_acces_si_diff_5",
+      "type": "string"
+    },
+    {
+      "name": "presta_mediation_5",
+      "type": "string"
+    },
+    {
+      "name": "code_label",
+      "type": "string",
+      "title": "Label"
+    },
+    {
+      "name": "wifi",
+      "type": "boolean"
+    },
+    {
+      "name": "precisions",
+      "type": "string"
+    },
+    {
+      "name": "codes_types_mediations",
+      "type": "string",
+      "title": "Type de médiation"
+    },
+    {
+      "name": "codes_publics",
+      "type": "string",
+      "title": "Publics"
+    },
+    {
+      "name": "codes_thematiques",
+      "type": "string",
+      "title": "Thématiques"
+    },
+    {
+      "name": "lat",
+      "type": "number"
+    },
+    {
+      "name": "lon",
+      "type": "number"
+    },
+    {
+      "name": "BAN_latitude",
+      "type": "number"
+    },
+    {
+      "name": "BAN_longitude",
+      "type": "number"
+    }
+  ]
+}

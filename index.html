@@ -9,58 +9,13 @@
   <title>RHINOCC</title>
 </head>
 
-<body style="background-color: #D7D7D7; padding: 1em;">
+<body style="background-color: white; padding: 1em;">
   <noscript>
     <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled.
       Please enable it to continue.</strong>
   </noscript>
-
-  <h2 id="title-demo" class="pt-6 title is-flex is-align-items-center is-justify-content-center has-text-white">
-    <p>
-      <a href="https://gitlab.com/multi-coop/datami" target="_blank">
-        <img src="https://gitlab.com/multi-coop/datami/-/raw/main/public/logo_DATAMI_title.png" alt="logo datami" style="height: 50px !important; width: auto !important">
-      </a>
-    </p>
-  </h2>
   
   <div class="container has-text-dark">
-    <div class="content my-6 px-6">
-      <p class="is-size-6">
-        L'import du widget <code>Datami</code> dans une page html permet d'afficher sur un site tiers des données hébergées sur github, gitlab ou dans un wiki.
-      </p>
-      <p class="">
-        L'import du widget consiste à simplement copier-coller quelques lignes de code dans la page html de votre choix.
-      </p>
-      <p class="">
-        Le widget est paramétrable et il peut être utilisé indistinctement et séparément pour différents jeux de données.
-      </p>
-      <p class="">
-        Le widget est sous licence libre et il n'y a aucun coût ou surcoût dans l'utilisation du widget.
-      </p>
-      <p class="">
-        Plusieurs fonctionnalités sont intégrées au widget Datami : 
-        <ul>
-          <li class="">
-            Filtres de sélection (paramétrables) ;
-          </li>
-          <li class="">
-            Redirection vers le site source depuis les fiches détaillées ;
-          </li>
-          <li class="">
-            Rechargement des données source ;
-          </li>
-          <li class="">
-            Possibilité de télécharger les données au format .tsv ;
-          </li>
-          <li class="">
-            ...et bien plus encore. Plus de d'infos dans la 
-            <a href="https://datami-docs.multi.coop" target="_blank" class="is-underlined">
-              documentation en ligne.
-            </a>
-          </li>
-        </ul>
-      </p>
-    </div>
 
     <div style="background-color: white; margin: 1em;">
 
@@ -69,17 +24,18 @@
 
       <!-- DATAMI WIDGET'S HTML BLOCK-->
       <datami-multi-files
-        title="Inclusion et médiation numérique en Occitanie"
+        title="Rhinocc - Inclusion et médiation numérique en Occitanie"
         options='{
           "display": "horizontal"
         }'
         gitfiles='[
         {
-          "title": "Rhinocc : lieux de médiation numérique",
+          "title": "Lieux de médiation numérique",
           "activate": true,
-          "gitfile_": "http://localhost:8800/statics/csv/geocoding/geocoded-for-datami.csv",
-          "gitfile_test_bis": "https://github.com/multi-coop/data-rhinocc-inclusion/blob/main/csv/rhinocc-inclusion-dataset.csv",
-          "gitfile": "https://github.com/multi-coop/data-rhinocc-inclusion/blob/main/csv/geocoding/geocoded-for-datami.csv",
+          "localdev": false,
+          "gitfilelocal": "http://localhost:8800/statics/csv/geocoding/rhinocc-inclusion-dataset-geocoded.csv",
+          "gitfile_test": "https://github.com/multi-coop/data-rhinocc-inclusion/blob/main/csv/rhinocc-inclusion-dataset.csv",
+          "gitfile": "https://github.com/multi-coop/data-rhinocc-inclusion/blob/main/csv/geocoding/rhinocc-inclusion-dataset-geocoded.csv",
           "default-tab": true,
           "options": {
             "height": "500px",
@@ -89,21 +45,35 @@
               "activate": true,
               "filterfields": [
                 {
+                  "name": "codes_publics",
+                  "filtering": "OR"
+                },
+                {
+                  "name": "codes_types_mediations",
+                  "filtering": "OR"
+                },
+                {
                   "name": "type_lieu",
                   "filtering": "OR"
                 },
                 {
                   "name": "nature_juridique",
                   "filtering": "OR"
+                },
+                {
+                  "name": "code_label",
+                  "filtering": "OR"
                 }
               ]
             },
             "schema": {
-              "file_test": "http://localhost:8900/statics/json/inclusion-schema.json",
-              "file": "https://github.com/multi-coop/data-inclusion-schema/blob/main/json/inclusion-schema.json"
+              "localdev": false,
+              "filelocal": "http://localhost:8800/statics/json/rhinocc-inclusion-schema.json",
+              "file": "https://github.com/multi-coop/data-inclusion-schema/blob/main/json/rhinocc-inclusion-schema.json"
             },
             "fields-custom-properties": {
-              "file_test": "http://localhost:8800/statics/json/rhinocc-inclusion-fields-custom-props.json",
+              "localdev": false,
+              "filelocal": "http://localhost:8800/statics/json/rhinocc-inclusion-fields-custom-props.json",
               "file": "https://github.com/multi-coop/data-rhinocc-inclusion/blob/main/json/rhinocc-inclusion-fields-custom-props.json"
             },
             "cardsview": {
@@ -119,15 +89,24 @@
                 "adresse_full": {
                   "position": "adress"
                 },
-                "siren": {
-                  "position": "resume",
-                  "prefix": "Numéro SIREN :"
+                "departement_": {
+                  "position": "tags",
+                  "prefix": "Département : "
                 },
                 "nature_juridique": {
-                  "position": "tags"
+                  "position": "tags",
+                  "prefix": "Nature juridique : "
                 },
                 "type_lieu": {
                   "position": "subtitle"
+                },
+                "code_label": {
+                  "position": "tags",
+                  "prefix": "Label : "
+                },
+                "codes_publics": {
+                  "position": "tags",
+                  "prefix": "Publics : "
                 }
               },
               "detail": {
@@ -137,54 +116,101 @@
                 "adresse_full": {
                   "position": "adress"
                 },
-                "siren": {
-                  "position": "description",
-                  "prefix": "Numéro SIREN :",
-                  "block_title": "Description"
-                },
                 "departement": {
-                  "position": "tags",
-                  "block_title": "Département(s)"
+                  "position": "tags_top",
+                  "block_title": "Département"
+                },
+                "lundi": {
+                  "position": "infos",
+                  "block_title": "Horaires",
+                  "note": "templated"
                 },
                 "nature_juridique": {
-                  "position": "tags",
+                  "position": "tags_top",
                   "block_title": "Nature juridique",
                   "right": true
                 },
                 "type_lieu": {
-                  "position": "subtitle",
-                  "block_title": "Type de lieu",
+                  "position": "tags_top",
+                  "block_title": "Type de Lieu",
+                  "right": true
+                },
+                "codes_publics": {
+                  "position": "tags_top",
+                  "block_title": "Types de publics",
+                  "right": true
+                },
+                "codes_types_mediations": {
+                  "position": "tags_top",
+                  "block_title": "Types de médiation",
+                  "right": true
+                },
+                "code_label": {
+                  "position": "tags",
+                  "block_title": "Label",
+                  "right": true
+                },
+                "tel_structure": {
+                  "position": "description",
+                  "block_title": "Téléphone"
+                },
+                "email_structure": {
+                  "position": "links",
+                  "block_title": "Email"
+                },
+                "site_internet": {
+                  "position": "links",
+                  "block_title": "Site internet"
+                },
+                "date_maj": {
+                  "position": "infos",
+                  "prefix": "Date de mise à jour :",
                   "right": true
                 }
               },
               "templates": {
-                "siren": {
+                "lundi": {
                   "use_on_mini": true,
                   "use_on_detail": true,
                   "paragraphs": [
                     {
                       "text": {
-                        "fr": "L‘organisation {{ nom }} est une {{ type }} et se situe dans le département {{ depcode }} ({{ dep_label }}) en région {{ reg_code_short }}."
+                        "fr": "Lundi : &#123;&#123; lundi &#125;&#125;"
                       }
                     },
                     {
                       "text": {
-                        "fr": "Cette commune représente une population de {{ pop_insee }} habitants."
+                        "fr": "Mardi : &#123;&#123; mardi &#125;&#125;"
                       }
                     },
                     {
                       "text": {
-                        "fr": "{{ nom }} publie sur {{ merge }} avec une plateforme de type {{ platform_clean }}."
+                        "fr": "Mercredi : &#123;&#123; mercredi &#125;&#125;"
                       }
                     },
                     {
                       "text": {
-                        "fr": "Cette organisation a publié {{ nb_ptf }} jeux de données sur sa plateforme et {{ nb_datagouv }} jeux sur data.gouv.fr."
+                        "fr": "Jeudi : &#123;&#123; jeudi &#125;&#125;"
                       }
                     },
                     {
                       "text": {
-                        "fr": "Plus d‘infos en cliquant sur ici : ~~ url_ptf ~~"
+                        "fr": "Vendredi : &#123;&#123; vendredi &#125;&#125;"
+                      }
+                    },
+                    {
+                      "text": {
+                        "fr": "Samedi : &#123;&#123; samedi &#125;&#125;"
+                      }
+                    },
+                    {
+                      "text": {
+                        "fr": "Dimanche : &#123;&#123; dimanche &#125;&#125;"
+                      }
+                    },
+                    {
+                      "text": {
+                        "fr": "Plus d‘infos en cliquant ici : ~~ site_internet ~~"
                       }
                     }
                   ]
@@ -198,8 +224,8 @@
                   "maxZoom": 18,
                   "minZoom": 2,
                   "item_geo_fields": {
-                    "latitude": "lat",
-                    "longitude": "lon"
+                    "latitude": "BAN_latitude",
+                    "longitude": "BAN_longitude"
                   },
                   "zoom_item": 13,
                   "marker_icon": "map-marker",
@@ -212,7 +238,8 @@
             "datavizview": {
               "activate": true,
               "default": false,
-              "file_test": "http://localhost:8800/statics/json/rhinocc-inclusion-dataviz-settings.json",
+              "localdev": false,
+              "filelocal": "http://localhost:8800/statics/json/rhinocc-inclusion-dataviz-settings.json",
               "file": "https://github.com/multi-coop/data-rhinocc-inclusion/blob/main/json/rhinocc-inclusion-dataviz-settings.json"
             },
             "mapview": {
@@ -224,7 +251,8 @@
                     "fr": "CARTOGRAPHIE"
                   },
                   "cols": 12,
-                  "file_test": "http://localhost:8800/statics/json/rhinocc-inclusion-map-settings.json",
+                  "localdev": false,
+                  "filelocal": "http://localhost:8800/statics/json/rhinocc-inclusion-map-settings.json",
                   "file": "https://github.com/multi-coop/data-rhinocc-inclusion/blob/main/json/rhinocc-inclusion-map-settings.json"
                 }
               ]
@@ -233,10 +261,41 @@
           "usertoken": ""
         },
         {
+          "title": "La démarche",
+          "activate": true,
+          "default-tab": false,
+          "localdev": false,
+          "gitfilelocal": "http://localhost:8800/statics/markdown/la-demarche.md",
+          "gitfile": "https://github.com/multi-coop/data-rhinocc-inclusion/blob/main/markdown/la-demarche.md",
+          "onlypreview": true,
+          "usertoken": ""
+        },
+        {
+          "title": "Les données",
+          "activate": true,
+          "default-tab": false,
+          "localdev": false,
+          "gitfilelocal": "http://localhost:8800/statics/markdown/les-donnees.md",
+          "gitfile": "https://github.com/multi-coop/data-rhinocc-inclusion/blob/main/markdown/les-donnees.md",
+          "onlypreview": true,
+          "usertoken": ""
+        },
+        {
+          "title": "Contribuer",
+          "activate": true,
+          "default-tab": false,
+          "localdev": false,
+          "gitfilelocal": "http://localhost:8800/statics/markdown/contribuer.md",
+          "gitfile": "https://github.com/multi-coop/data-rhinocc-inclusion/blob/main/markdown/contribuer.md",
+          "onlypreview": true,
+          "usertoken": ""
+        },
+        {
           "title": "Schéma des données",
           "activate": true,
           "default-tab": false,
-          "gitfile_test": "http://localhost:8900/statics/json/inclusion-schema.json",
+          "localdev": false,
+          "gitfilelocal": "http://localhost:8900/statics/json/inclusion-schema.json",
           "gitfile": "https://github.com/multi-coop/data-inclusion-schema/blob/main/json/inclusion-schema.json",
           "options": {
             "defaultDepth": 2,
@@ -250,11 +309,18 @@
       ></datami-multi-files>
 
       <!-- DATAMI WIDGET'S APP.JS SCRIPT -->
-      <script src="https://datami-widget.multi.coop/js/app.js" type="text/javascript" defer></script>
-      <!-- <script src="http://localhost:8080/js/app.js" type="text/javascript" defer></script> -->
-
+      <!-- <script src="https://datami-widget.multi.coop/js/app.js" type="text/javascript" defer></script> -->
+      <script src="http://localhost:8080/js/app.js" type="text/javascript" defer></script>
 
     </div>
+
+    <h2 id="title-demo" class="pt-6 title is-flex is-align-items-center is-justify-content-center has-text-white">
+      <p>
+        <a href="https://gitlab.com/multi-coop/datami" target="_blank">
+          <img src="https://gitlab.com/multi-coop/datami/-/raw/main/public/logo_DATAMI_title.png" alt="logo datami" style="height: 30px !important; width: auto !important">
+        </a>
+      </p>
+    </h2>
 
     <p id="page-credits" class="mt-6 has-text-centered has-text-white">
       Un projet numérique en partenariat avec

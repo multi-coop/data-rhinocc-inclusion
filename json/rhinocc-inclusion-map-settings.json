@@ -5,16 +5,15 @@
     "url"              : "https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png",
     "attribution"      : "&copy; <a href=\"https://www.openstreetmap.org/copyright\">OpenStreetMap</a> contributors &copy; <a href=\"https://carto.com/attributions\">CARTO</a>",
     "subdomains"       : "abcd",
-    "center"           : [1.625257, 43.281245],
-    "currentCenter"    : [1.625257, 43.281245],
-    "zoom"             : 7.3,
+    "center"           : [2.07, 43.9],
+    "zoom"             : 6.75,
     "maxZoom"          : 18,
     "minZoom"          : 2,
     "useMarkerCluster" : true,
 
     "item_geo_fields"   : {
-      "latitude" : "latitude",
-      "longitude": "longitude"
+      "latitude" : "BAN_latitude",
+      "longitude": "BAN_longitude"
     },
 
     "item_marker"       : "map-marker",
@@ -365,7 +364,7 @@
         {
           "label" : "lieux",  
           "layers" : [ "all-points" ],
-          "default_visible" : false
+          "default_visible" : true
         }, 
         {
           "label" : "ensembles" ,
